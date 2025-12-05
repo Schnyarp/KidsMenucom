@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>kidsmenu.com — Premium Domain For Sale</title>
+  <meta name="description" content="kidsmenu.com — premium domain ideal for family dining, kid-friendly recipes, children's nutrition apps, school lunch solutions, and meal-planning services. Submit an offer to purchase." />
+  <meta property="og:title" content="kidsmenu.com — Premium Domain For Sale" />
+  <meta property="og:description" content="kidsmenu.com — premium domain for kid-friendly restaurants, recipe apps, school lunch platforms and family meal planners. Contact domain@kidsmenu.com" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#ffdfc4" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --max-width:1040px;
+      --panel:#ffffff;
+      --muted:#6b7a81;
+      --accent-1:#ffb86b; /* warm peach */
+      --accent-2:#7ad3ff; /* sky */
+      --accent-3:#9be76a; /* fresh green */
+      --text:#083139;
+      --radius:16px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:32px 20px;
+      color:var(--text);
+      background:
+        radial-gradient(900px 360px at 12% 12%, rgba(122,231,255,0.06), transparent 12%),
+        linear-gradient(180deg, #fff9f6 0%, #fffdfb 50%, #f7fff9 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      overflow-x:hidden;
+    }
+
+    /* Chosen look: playful, family-friendly "kids' table" motif
+       - pastel paper background
+       - floating illustrated menu items (apple, milk, star cookie, fork & spoon)
+       - subtle confetti / dots for fun energy
+    */
+    .background {
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+    }
+
+    .paper {
+      position:fixed;
+      left:50%;
+      top:8%;
+      width:1100px;
+      height:560px;
+      transform:translateX(-50%);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.25));
+      filter: blur(18px);
+      opacity:0.95;
+      z-index:0;
+      pointer-events:none;
+      mix-blend-mode:screen;
+    }
+
+    .confetti {
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      opacity:0.9;
+    }
+
+    .item {
+      position:absolute;
+      width:72px;
+      height:72px;
+      background-size:contain;
+      background-repeat:no-repeat;
+      will-change: transform, opacity;
+      opacity:0.95;
+      filter: drop-shadow(0 10px 20px rgba(8,49,57,0.08));
+    }
+
+    /* small bob animation for items */
+    @keyframes bob {
+      0% { transform: translateY(0) rotate(-6deg); }
+      50% { transform: translateY(-14px) rotate(6deg); }
+      100% { transform: translateY(0) rotate(-6deg); }
+    }
+
+    .item { animation: bob 7s ease-in-out infinite; }
+
+    /* dotted table grid to hint at a placemat */
+    .placemat {
+      position:fixed;
+      inset:auto 6% 6% 6%;
+      height:360px;
+      z-index:0;
+      pointer-events:none;
+      background-image:
+        radial-gradient(circle, rgba(8,49,57,0.02) 1px, transparent 1px);
+      background-size:18px 18px;
+      opacity:0.85;
+      border-radius:20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      padding:34px;
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.995), rgba(255,255,255,0.99));
+      box-shadow: 0 30px 80px rgba(6,18,20,0.06);
+      border: 1px solid rgba(6,18,20,0.03);
+      position:relative;
+      z-index:2;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:20px;
+    }
+
+    .brand{ display:flex; gap:14px; align-items:center; }
+    .logo{
+      width:80px;
+      height:80px;
+      border-radius:16px;
+      background: linear-gradient(135deg,var(--accent-1),var(--accent-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#072827;
+      font-weight:900;
+      font-size:20px;
+      box-shadow: 0 14px 36px rgba(8,49,57,0.08);
+      flex-shrink:0;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    h1{ margin:0; font-size:28px; color:var(--text); }
+    p.lead{ margin:6px 0 0; color:var(--muted); font-size:14px; max-width:720px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:26px;
+      align-items:start;
+    }
+
+    .hero {
+      background: linear-gradient(90deg, rgba(122,231,255,0.03), rgba(155,231,106,0.02));
+      padding:14px 16px;
+      border-radius:12px;
+      color:var(--text);
+      margin-bottom:16px;
+      border:1px solid rgba(6,18,20,0.03);
+    }
+    .hero p{ margin:0; font-size:14px; color:var(--text); }
+
+    .panel {
+      background: var(--panel);
+      color:var(--text);
+      padding:22px;
+      border-radius:14px;
+      box-shadow: 0 8px 26px rgba(6,18,20,0.04);
+      border: 1px solid rgba(6,18,20,0.02);
+      max-width:var(--content-width);
+    }
+
+    h2{ margin-top:0; font-size:20px; color:var(--text); }
+    .features ul{ margin:0; padding-left:18px; color:var(--muted); }
+    .features li{ margin-bottom:10px; }
+
+    .cta-row{ display:flex; gap:12px; margin-top:18px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+      text-decoration:none;
+      border:0;
+    }
+    .btn-primary{
+      background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
+      color:#072827;
+      box-shadow: 0 10px 30px rgba(8,49,57,0.12);
+    }
+    .btn-ghost{
+      background:transparent;
+      border:1px solid rgba(6,18,20,0.06);
+      color:var(--muted);
+    }
+
+    .price { margin-top:12px; font-weight:700; color:var(--text); font-size:16px; }
+    .muted-small { color:var(--muted); font-size:13px; margin-top:6px; }
+
+    .contact-card{
+      position:sticky;
+      top:32px;
+      align-self:start;
+      background: linear-gradient(180deg, rgba(255,255,255,0.995), rgba(255,255,255,0.98));
+      padding:18px;
+      border-radius:12px;
+      border:1px solid rgba(6,18,20,0.03);
+      box-shadow: 0 8px 26px rgba(6,18,20,0.035);
+      max-width:360px;
+    }
+
+    .contact-card h3{ margin:0 0 8px 0; font-size:16px; color:var(--text); }
+    .contact-email, .contact-email a{
+      white-space:nowrap;
+      display:inline-block;
+      font-weight:700;
+      color:var(--accent-2);
+      word-break: normal;
+      font-size:0.98rem;
+      text-decoration:none;
+    }
+
+    form label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    form input, form textarea {
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(6,18,20,0.06);
+      background:#fff;
+      color:var(--text);
+      font-size:14px;
+      margin-bottom:12px;
+    }
+    form textarea{ min-height:110px; resize:vertical; }
+
+    footer{ margin-top:18px; color:var(--muted); font-size:13px; text-align:center; }
+
+    @media (max-width:980px){
+      .grid{ grid-template-columns: 1fr; gap:18px; }
+      .contact-card{ position:relative; top:auto; width:100%; max-width:none; }
+      .container{ padding:22px; }
+      .logo{ width:64px; height:64px; border-radius:12px; }
+      h1{ font-size:22px; }
+      .paper, .placemat { display:none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "url":"https://kidsmenu.com",
+        "name":"kidsmenu.com",
+        "description":"kidsmenu.com — premium domain for kid-friendly restaurants, recipe apps, school lunch platforms and family meal planners."
+      },
+      {
+        "@type":"ContactPoint",
+        "contactType":"sales",
+        "email":"domain@kidsmenu.com"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="background" aria-hidden="true">
+    <div class="paper" aria-hidden="true"></div>
+    <div class="placemat" aria-hidden="true"></div>
+
+    <div class="confetti" aria-hidden="true" id="confettiLayer"></div>
+
+    <!-- floating illustrated items (SVG data URLs set by JS) -->
+    <div id="itemsLayer" aria-hidden="true"></div>
+  </div>
+
+  <main class="container" role="main" aria-labelledby="main-heading">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">KM</div>
+        <div>
+          <h1 id="main-heading">kidsmenu.com</h1>
+          <p class="lead">Premium domain for kid-friendly restaurants, recipe & meal-planning apps, school lunch systems, and family dining experiences.</p>
+        </div>
+      </div>
+
+      <div style="text-align:right">
+        <div style="color:var(--muted); font-size:13px">For inquiries</div>
+        <div class="contact-email"><a href="mailto:domain@kidsmenu.com">domain@kidsmenu.com</a></div>
+      </div>
+    </header>
+
+    <div class="hero" role="note" aria-live="polite">
+      <p>KidsMenu.com communicates family-first mealtime and playful nutrition — ideal for apps and services that make eating better and more fun for children and families.</p>
+    </div>
+
+    <section class="grid" aria-label="Main content">
+      <div>
+        <article class="panel" aria-labelledby="why-title">
+          <h2 id="why-title">Why kidsmenu.com?</h2>
+          <p class="lead">A clear, consumer-friendly .com that signals family dining, healthy children’s meals, and kid-focused food experiences. Works well for restaurants, meal planners, recipe apps, school lunch services, and kid nutrition products.</p>
+
+          <div class="features" style="margin-top:12px">
+            <ul>
+              <li>Memorable and descriptive — immediately signals category and intent</li>
+              <li>Fits mobile apps, marketplaces, school & childcare meal platforms, and D2C food brands</li>
+              <li>Brandable across packaging, social media, and in-app experiences</li>
+            </ul>
+
+            <p style="margin-top:12px"><a href="https://corelli.com/domains.html" style="color:var(--accent-3)">How to Choose A Domain Name</a></p>
+          </div>
+
+          <div class="cta-row" role="group" aria-label="Actions">
+            <a class="btn btn-primary" href="#" id="inquireBtn">Make an Offer</a>
+            <a class="btn btn-ghost" href="mailto:domain@kidsmenu.com?subject=Domain%20Offer%20-%20kidsmenu.com">Email Now</a>
+          </div>
+
+          <div class="price">Domain: kidsmenu.com</div>
+          <div class="muted-small">Serious offers only. Transfer via escrow recommended for secure and trusted handling.</div>
+        </article>
+
+        <article class="panel" style="margin-top:18px" aria-labelledby="about-title">
+          <h3 id="about-title" style="margin-top:0">About this domain</h3>
+          <p class="lead">KidsMenu.com is suited to founders and operators building mealtime experiences for families — from discovery apps and recipe hubs to school lunch management, kid nutrition services, and family dining marketplaces.</p>
+
+          <ul style="color:var(--muted); margin-top:12px">
+            <li>Great for family dining apps, school lunch platforms and curated kids' recipe marketplaces</li>
+            <li>Useful for nutrition-focused products, meal subscriptions and family dining tech</li>
+            <li>Transfer-ready — escrow recommended to ensure a secure transaction</li>
+          </ul>
+        </article>
+      </div>
+
+      <aside class="contact-card" aria-label="Contact & offer">
+        <div>
+          <h3 style="margin-top:0">Contact & Offer</h3>
+          <p style="margin-top:6px;color:var(--muted)">Submit an offer — this form opens your email client with the details prefilled. Or email <a href="mailto:domain@kidsmenu.com" class="contact-email">domain@kidsmenu.com</a>.</p>
+
+          <form id="inquiryForm" onsubmit="handleSubmit(event)" aria-label="Domain offer form">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="offer">Your offer (USD)</label>
+            <input id="offer" name="offer" type="text" placeholder="Enter your offer (USD)" required />
+
+            <label for="company">Company (optional)</label>
+            <input id="company" name="company" type="text" placeholder="Your company or organization" />
+
+            <label for="country">Country</label>
+            <input id="country" name="country" type="text" placeholder="Your country" required />
+
+            <label for="phone">Phone number (optional)</label>
+            <input id="phone" name="phone" type="tel" />
+
+            <label for="message">Message (questions, timeline, escrow preference)</label>
+            <textarea id="message" name="message" placeholder="Hi — I'm submitting an offer for kidsmenu.com. Please share transfer instructions and next steps."></textarea>
+
+            <button class="btn btn-primary" type="submit" style="width:100%; margin-top:6px">Send Offer</button>
+          </form>
+
+          <footer style="margin-top:10px; text-align:left; color:var(--muted); font-size:13px">
+            Prefer a direct email? <a href="mailto:domain@kidsmenu.com" style="color:var(--accent-2)" class="contact-email">domain@kidsmenu.com</a>
+          </footer>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      &copy; 2025 kidsmenu.com. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // Place playful illustrated items and light confetti programmatically
+    (function placeDecor(){
+      const itemsLayer = document.getElementById('itemsLayer');
+      const confettiLayer = document.getElementById('confettiLayer');
+      if(!itemsLayer || !confettiLayer) return;
+
+      // small SVG sprites for items
+      const svgs = {
+        apple: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g fill='none' fill-rule='evenodd'><path d='M33 6c1 3 0 6-2 8-3 3-8 3-11 0-3-3-4-7-2-10 3-4 10-5 15 2z' fill='%23FF7A59'/><path d='M16 30c-1 10 7 20 18 20s20-10 20-20c0-11-9-20-20-20S17 19 16 30z' fill='%23FFD36B'/></g></svg>`),
+        milk: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect x='18' y='14' width='28' height='36' rx='3' fill='%23FFFFFF' stroke='%23000000' stroke-opacity='0.06'/><circle cx='38' cy='22' r='4' fill='%23FFB4A2' opacity='0.9'/></svg>`),
+        cookie: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='20' fill='%23FFD9A6'/><circle cx='24' cy='28' r='2' fill='%230B2A2A'/><circle cx='38' cy='36' r='2' fill='%230B2A2A'/></svg>`),
+        fork: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M20 6v30c0 6 8 8 10 14 2 6 8 6 8 6' stroke='%23000000' stroke-opacity='0.06' stroke-width='2' fill='none'/><path d='M18 6h2v16h-2zM24 6h2v16h-2z' fill='%23FFD36B' opacity='0.9'/></svg>`)
+      };
+
+      const descriptors = [
+        {type:'apple', left:'8%', top:'14%', size:76, delay:0.2},
+        {type:'milk', left:'78%', top:'20%', size:68, delay:1.2},
+        {type:'cookie', left:'22%', top:'62%', size:64, delay:0.6},
+        {type:'fork', left:'66%', top:'62%', size:56, delay:1.6},
+      ];
+
+      descriptors.forEach(d => {
+        const el = document.createElement('div');
+        el.className = 'item';
+        el.style.left = d.left;
+        el.style.top = d.top;
+        el.style.width = d.size + 'px';
+        el.style.height = d.size + 'px';
+        el.style.backgroundImage = `url("data:image/svg+xml;utf8,${svgs[d.type]}")`;
+        el.style.animationDelay = `${d.delay}s`;
+        itemsLayer.appendChild(el);
+      });
+
+      // confetti dots
+      const colors = ['#FFB86B','#7AD3FF','#9BE76A','#FFD6EB','#FFD36B'];
+      for(let i=0;i<28;i++){
+        const c = document.createElement('div');
+        c.style.position = 'absolute';
+        c.style.left = (4 + Math.random()*92) + 'vw';
+        c.style.top  = (6 + Math.random()*84) + 'vh';
+        c.style.width = (6 + Math.random()*10) + 'px';
+        c.style.height = c.style.width;
+        c.style.borderRadius = '50%';
+        c.style.background = colors[Math.floor(Math.random()*colors.length)];
+        c.style.opacity = 0.85;
+        c.style.transform = `rotate(${Math.random()*360}deg)`;
+        c.style.filter = 'blur(0.2px)';
+        c.style.transition = `transform ${5000 + Math.random()*9000}ms ease-in-out, opacity ${5000 + Math.random()*9000}ms linear`;
+        confettiLayer.appendChild(c);
+
+        // animate subtle drift
+        (function(el){
+          function drift(){
+            el.style.transform = `translate(${(Math.random()-0.5)*20}px, ${(Math.random()-0.5)*20}px) rotate(${Math.random()*360}deg)`;
+            el.style.opacity = 0.4 + Math.random()*0.6;
+            setTimeout(drift, 3000 + Math.random()*7000);
+          }
+          setTimeout(drift, Math.random()*1000);
+        })(c);
+      }
+    })();
+
+    // Compose a mailto: URL from the form contents to open the user's email client.
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const offer = document.getElementById('offer').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Domain Offer - kidsmenu.com');
+      const bodyText =
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Company: ${company || '(not provided)'}\n` +
+        `Offer (USD): ${offer}\n` +
+        `Country: ${country}\n` +
+        `Phone: ${phone || '(not provided)'}\n\n` +
+        `Message:\n${message}\n\n---\nSent from kidsmenu.com offer form`;
+
+      const body = encodeURIComponent(bodyText);
+      const mailto = `mailto:domain@kidsmenu.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    }
+
+    document.getElementById('inquireBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const form = document.getElementById('inquiryForm');
+      if(window.innerWidth < 900){
+        form.scrollIntoView({behavior:'smooth', block:'center'});
+        form.querySelector('input').focus();
+      } else {
+        const subject = encodeURIComponent('Domain Offer - kidsmenu.com');
+        const body = encodeURIComponent('Hi — I would like to make an offer for kidsmenu.com. Please reply with transfer instructions and next steps.');
+        window.location.href = `mailto:domain@kidsmenu.com?subject=${subject}&body=${body}`;
+      }
+    });
+  </script>
+</body>
+</html>
